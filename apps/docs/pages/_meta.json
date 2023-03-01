@@ -1,7 +1,14 @@
 {
-    "index": "My Homepage",
-    "docs": "Docs11",
-    "contact": "Contact Us",
-    "fruits": "Delicious Fruits",
-    "about": "About Us"
+    "index": {
+        "title": "Home",
+        "type": "page"
+    },
+    "docs": {
+        "title": "Docs",
+        "type": "page"
+    },
+    "about": {
+        "title": "About",
+        "type": "page"
+    }
 }

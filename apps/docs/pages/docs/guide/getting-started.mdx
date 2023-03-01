@@ -1,0 +1,135 @@
+---
+title: Getting started
+description: Get started with ThanosUI in the official documentation, and learn more about all our features!
+url: https://thanosui.org/docs/getting-started
+---
+
+# Getting started
+
+Welcome to the ThanosUI documentation!
+
+ThanosUI allows you to make beautiful, modern, and fast websites/applications regardless of your design experience, created with <a href="https://reactjs.org/" rel="noreferrer" target="_blank">React.js</a> and <a href="https://stitches.dev/" rel="noreferrer" target="_blank">
+Stitches</a>, based on <a href="https://react-spectrum.adobe.com/react-aria/index.html" rel="noreferrer" target="_blank">
+React Aria</a> and inspired by <a href="https://vuesax.com/" rel="noreferrer" target="_blank">Vuesax</a>.
+
+### Installation
+
+Inside your React project directory, install ThanosUI by running either of the following:
+
+```bash
+yarn add @thanosui
+```
+
+```bash
+npm i @thanosui
+```
+
+### Setup
+
+For ThanosUI to work correctly, you need to set up the `ThanosUIProvider` at the root of your application.
+
+#### React
+
+Go to the root of your application and do this:
+
+```jsx
+import * as React from 'react';
+// 1. import `ThanosUIProvider` component
+import { ThanosUIProvider } from '@ThanosUI-org/react';
+function App({ Component }) {
+  // 2. Use at the root of your app
+  return (
+    <ThanosUIProvider>
+      <Component />
+    </ThanosUIProvider>
+  );
+}
+```
+
+#### Next.js
+
+1. Go to `pages/_app.js` or `pages/_app.tsx` (create it if it doesn't exist) and add this:
+
+```jsx
+// 1. import `ThanosUIProvider` component
+import { ThanosUIProvider } from '@ThanosUI-org/react';
+function MyApp({ Component, pageProps }) {
+  return (
+    // 2. Use at the root of your app
+    <ThanosUIProvider>
+      <Component {...pageProps} />
+    </ThanosUIProvider>
+  );
+}
+export default MyApp;
+```
+
+2. Go to `pages/_document.js` or `pages/_document.tsx` (create if it doesn't exist) and add this:
+
+```jsx
+import React from 'react';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { CssBaseline } from '@thanosui-org/react';
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return {
+      ...initialProps,
+      styles: React.Children.toArray([initialProps.styles])
+    };
+  }
+  render() {
+    return (
+      <Html lang="en">
+        <Head>{CssBaseline.flush()}</Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+export default MyDocument;
+```
+
+> For more information about Next.js + ThanosUI SSR check out the [documentation](/docs/guide/thanosui-plus-nextjs).
+ 
+### Using ThanosUI components
+
+Once ThanosUI is installed you can use any of the components as follows.
+ThanosUI uses tree-shaking so the unused modules will not be included in the bundle during the build process and
+each component is exported separately.
+
+```jsx
+import { Button } from '@thanosui-org/react';
+const Component = () => <Button>Click me</Button>;
+```
+ 
+
+### Individual components import
+
+```jsx
+import Button from '@thanosui-org/react/button';
+const Component = () => <Button>Click me</Button>;
+```
+ 
+### ThanosUIProvider Props
+
+| Attribute           | Type           | Accepted values              | Description                                                    | Default |
+| ------------------- | -------------- | ---------------------------- | -------------------------------------------------------------- | ------- |
+| **theme**           | `ThanosUIThemes` | [ThemeObject](#theme-object) | Optional custom theme, by default ThanosUI applies `light` theme | -       |
+| **disableBaseline** | `boolean`      | `true/false`                 | ThanosUI automatically includes `<CssBaseline/>`                 | `false` |
+ 
+### Community
+
+We're excited to see the community adopt ThanosUI, raise issues, and provide feedback.
+Whether it's a feature request, bug report, or a project to showcase, please get involved!
+
+- [Discord](https://discord.gg/9b6yyZKmH4)
+- [Twitter](https://twitter.com/getnextui)
+- [GitHub Discussions](https://github.com/nextui-org/nextui/discussions)
+- [GitHub](https://github.com/nextui-org/nextui)
+ 
+### Warning 🚧
+This project is still in development, it might have bugs and breaking changes so it is not recommended to use it in production. We hope to have a stable version soon 🚀.

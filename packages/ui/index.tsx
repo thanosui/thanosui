@@ -1,2 +1,4 @@
-import * as React from "react";
-export * from "./Button";
+import "./src/styles.css";
+
+export * from './src/Button'
+export * from './src/Avatar'
