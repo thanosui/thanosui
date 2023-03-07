@@ -6,6 +6,9 @@ const button = tv({
     color: {
       primary: "bg-blue-500 text-white",
       secondary: "bg-purple-500 text-white",
+      success: "bg-green-500 text-white",
+      warning: "bg-orange-500 text-white",
+      error: "bg-red-500 text-white",
     },
     size: {
       sm: "text-sm",
@@ -25,13 +28,16 @@ const button = tv({
   }
 });
 
-interface ButtonProps {
+interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
   title: string
-  type: 'primary' | 'secondary'
+  color: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
   size: 'sm' | 'md' | 'lg'
 }
-export const Button = ({ title, size = 'sm', type = 'primary' }: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
+  const { title, size = 'md', color = 'primary', disabled, ...rest } = props;
   return (
-    <button style={{ borderWidth: 2, }} className={button({ size, color: type })}>{title}</button>
+    <button
+      {...rest}
+      className={button({ size, color })}>{title}</button>
   )
 }
