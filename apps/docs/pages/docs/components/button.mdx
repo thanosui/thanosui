@@ -10,25 +10,25 @@ import { Button } from "@thanosui";
 
 ## Default
 
-<Button title="Button" />
+<Button>Button</Button>
 
 ## Disabled
 
-<Button title="Button" disabled={true} />
+<Button  disabled={true} >Button</Button>
 
 ## Sizes
 
-<Button title="Button" size="sm" />
-<Button title="Button" size="md" />
-<Button title="Button" size="lg" />
+<Button  size="sm" >Button</Button>
+<Button  size="md" >Button</Button>
+<Button  size="lg" >Button</Button>
 
 ## Colors
 
-<Button title="Button" color="primary" />
-<Button title="Button" color="secondary" />
-<Button title="Button" color="success" />
-<Button title="Button" color="warning" />
-<Button title="Button" color="error" />
+<Button  color="primary" >Button</Button>
+<Button  color="secondary" >Button</Button>
+<Button  color="success" >Button</Button>
+<Button  color="warning" >Button</Button>
+<Button  color="error" >Button</Button>
 
 ## Button Props
 
@@ -45,7 +45,7 @@ import { Button } from "@thanosui";
   <tbody>
     <tr>
       <td>color</td>
-      <td>"default"| "primary" | "secondary" | "success" | "warning" | "error" | "gradient"</td>
+      <td>[NormalColors](#normal-colors)</td>
       <td>Change button color</td>
       <td>default</td>
     </tr>
@@ -59,7 +59,28 @@ import { Button } from "@thanosui";
         <td>disabled</td>
         <td>boolean</td>
         <td>Disable button</td>
-        <td>false</td>
+        <td>`false`</td>
     </tr>
   </tbody>
 </table>}
+
+### Button types
+
+#### Normal Colors
+
+```ts
+type NormalColors =
+  | "default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "warning"
+  | "error"
+  | "gradient";
+```
+
+#### Normal Sizes
+
+```ts
+type NormalSizes = "xs" | "sm" | "md" | "lg" | "xl";
+```

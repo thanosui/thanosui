@@ -30,6 +30,7 @@ importers:
       postcss: ^8.4.21
       react: 18.2.0
       react-dom: 18.2.0
+      remark-mdx-disable-explicit-jsx: ^0.1.0
       tailwind-config: workspace:*
       tailwindcss: ^3.2.7
       tsconfig: workspace:*
@@ -41,6 +42,7 @@ importers:
       nextra-theme-docs: 2.2.16_vew7vg7qzvsrfl7ub63f7u6dme
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      remark-mdx-disable-explicit-jsx: 0.1.0
       ui: link:../../packages/ui
     devDependencies:
       '@babel/core': 7.21.0
@@ -12331,6 +12333,14 @@ packages:
       mdast-util-math: 2.0.2
       micromark-extension-math: 2.0.2
       unified: 10.1.2
+    dev: false
+
+  /remark-mdx-disable-explicit-jsx/0.1.0:
+    resolution: {integrity: sha512-NC7NUbu4bExZnsWDTJE3UhBRZujW3gyqMufhTHn2GHhZ5LetWzyieyuZerBPdSniLx4d7QKDbf+d3u/qmMGyaQ==}
+    dependencies:
+      '@types/hast': 2.3.4
+      unified: 10.1.2
+      unist-util-visit: 4.1.2
     dev: false
 
   /remark-mdx/1.6.22:

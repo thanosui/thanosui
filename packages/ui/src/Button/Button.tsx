@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { tv } from 'tailwind-variants';
 
 const button = tv({
@@ -29,15 +30,16 @@ const button = tv({
 });
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
-  title: string
+  children: ReactNode
   color: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
   size: 'sm' | 'md' | 'lg'
 }
+
 export const Button = (props: ButtonProps) => {
-  const { title, size = 'md', color = 'primary', disabled, ...rest } = props;
+  const { children, size = 'md', color = 'primary', disabled, ...rest } = props;
   return (
     <button
       {...rest}
-      className={button({ size, color })}>{title}</button>
+      className={button({ size, color })}>{children}</button>
   )
 }
