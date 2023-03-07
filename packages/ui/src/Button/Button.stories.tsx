@@ -18,3 +18,10 @@ const Template: ComponentStory<typeof Button> = (args) => <Button />;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
+
+
+export const Accessible = () => <button>Accessible button</button>;
+
+export const Inaccessible = () => (
+  <button style={{ backgroundColor: 'red', color: 'darkRed' }}>Inaccessible button</button>
+);
