@@ -25,4 +25,13 @@ const button = tv({
   }
 });
 
-export const Button = () => <button style={{borderWidth:2,}} className={button({ size: 'md', color: 'secondary' })}>Click me</button>
+interface ButtonProps {
+  title: string
+  type: 'primary' | 'secondary'
+  size: 'sm' | 'md' | 'lg'
+}
+export const Button = ({ title, size = 'sm', type = 'primary' }: ButtonProps) => {
+  return (
+    <button style={{ borderWidth: 2, }} className={button({ size, color: type })}>{title}</button>
+  )
+}
