@@ -89,6 +89,7 @@ importers:
       '@babel/core': ^7.21.0
       '@storybook/addon-a11y': ^6.5.16
       '@storybook/addon-actions': ^6.5.16
+      '@storybook/addon-console': ^1.2.3
       '@storybook/addon-essentials': ^6.5.16
       '@storybook/addon-interactions': ^6.5.16
       '@storybook/addon-links': ^6.5.16
@@ -120,6 +121,7 @@ importers:
       '@babel/core': 7.21.0
       '@storybook/addon-a11y': 6.5.16_sgv4m26tnl4echlq645clg5jc4
       '@storybook/addon-actions': 6.5.16_sgv4m26tnl4echlq645clg5jc4
+      '@storybook/addon-console': 1.2.3_ir5g4lylnuwozoxhestv2jdbz4
       '@storybook/addon-essentials': 6.5.16_dod73a2zrrj5iscr3qlk3vncum
       '@storybook/addon-interactions': 6.5.16_reg7wm2a3qh3ah6z7o23eq7bcm
       '@storybook/addon-links': 6.5.16_sgv4m26tnl4echlq645clg5jc4
@@ -2922,6 +2924,15 @@ packages:
       regenerator-runtime: 0.13.11
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
+    dev: true
+
+  /@storybook/addon-console/1.2.3_ir5g4lylnuwozoxhestv2jdbz4:
+    resolution: {integrity: sha512-w5uCUwECA28fdZWoa+A4e/RS9XzBStdd3TwwmpSM5m4fjURJI7Qr+uVq30UeRdgZRH1K7CdWzYUE6RxWXMdVyw==}
+    peerDependencies:
+      '@storybook/addon-actions': '*'
+    dependencies:
+      '@storybook/addon-actions': 6.5.16_sgv4m26tnl4echlq645clg5jc4
+      global: 4.4.0
     dev: true
 
   /@storybook/addon-controls/6.5.16_silks4dog63mqdtfqietm5bzuq:
