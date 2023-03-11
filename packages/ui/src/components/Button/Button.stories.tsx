@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Button } from './Button';
+import { ButtonProps } from './types';
 
 export default {
 	component: Button,
@@ -30,30 +31,40 @@ export default {
 	},
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
+const defaultProps = {
+	children: "Button",
+	// ...button.defaultVariants,
+};
+
+const Template: ComponentStory<typeof Button> = (args: ButtonProps) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
 	color: 'default',
-};
+	...defaultProps
+}
 
 export const Primary = Template.bind({});
 Primary.args = {
+	...defaultProps,
 	color: 'primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+	...defaultProps,
 	color: 'secondary',
 };
 
 export const Success = Template.bind({});
 Success.args = {
+	...defaultProps,
 	color: 'success',
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
+	...defaultProps,
 	color: 'warning',
 };
 
@@ -63,6 +74,21 @@ Error.args = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.args = {
+Warning.args = {
+	...defaultProps,
 	disabled: true,
+};
+
+export const WithShadow = Template.bind({});
+Warning.args = {
+	...defaultProps,
+	shadow: true,
+};
+
+
+export const WithIcons = Template.bind({});
+WithIcons.args = {
+	...defaultProps,
+	leftIcon: <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>,
+	//   rightIcon: <Camera />,
 };
