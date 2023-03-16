@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { ButtonVariantProps } from './Button';
 // import { ButtonVariants } from '../Button';
 
 
@@ -12,18 +13,18 @@ import { ComponentPropsWithoutRef, ReactNode } from 'react';
 // 	rightIcon?: ReactNode
 // }
 
-type ButtonColor = 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+type ButtonColor = 'neutral' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
 
 export type As<Props = any> = React.ElementType<Props>;
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonVariantProps {
 	as?: As
 	children: ReactNode
 	icon?: React.ReactNode;
-	text: string;
 	onClick?: () => void;
-	disabled?: boolean;
-	shadow?: boolean;
+	// disabled?: boolean;
 	className?: string;
-	color?: ButtonColor;
+	// color?: ButtonColor;
+	// size: "md" | "sm" | "lg" | "xl" | "xs",
+	// variant: "shadow" | "bordered" | "solid" | "light" | "flat" | "faded" | "ghost"
 }

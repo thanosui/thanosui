@@ -5,15 +5,19 @@ module.exports = {
     "./index.html",
     "src/**/*.{js,ts,jsx,tsx}",
     // include packages if not transpiling
-    "../../packages/**/*.{js,ts,jsx,tsx}",
+    // "../../packages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // extend: {
-    //     colors: {
-    //         brandblue: colors.blue[500],
-    //         brandred: colors.red[500],
-    //     },
-    // },
+    colors: {
+        'bg-neutral': colors.neutral[500],
+        'bg-primary': colors.blue[500],
+        'bg-secondary': colors.purple[500],
+        'bg-success ': colors.green[500],
+        'bg-warning ': colors.yellow[500],
+        'bg-danger ': colors.red[500],
+    },
+    extend: {
+    },
   },
   plugins: [],
 };

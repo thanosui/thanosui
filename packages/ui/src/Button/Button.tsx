@@ -28,12 +28,12 @@ const button = tv({
 			ghost: "border-2 !bg-transparent",
 		},
 		color: {
-			default: "text-gray-700 bg-gray-200 hover:bg-gray-300 focus:bg-gray-300",
-			primary: "text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600",
-			secondary: "text-white bg-purple-500 hover:bg-purple-600 focus:bg-purple-600",
-			success: "text-white bg-green-500 hover:bg-green-600 focus:bg-green-600",
-			warning: "text-white bg-yellow-500 hover:bg-yellow-600 focus:bg-yellow-600",
-			danger: "text-white bg-red-500 hover:bg-red-600 focus:bg-red-600",
+			neutral: colorVariants.solid.neutral,
+			primary: colorVariants.solid.primary,
+			secondary: colorVariants.solid.secondary,
+			success: colorVariants.solid.success,
+			warning: colorVariants.solid.warning,
+			danger: colorVariants.solid.danger
 		},
 		size: {
 			xs: "px-2 h-6 text-xs",
@@ -59,9 +59,6 @@ const button = tv({
 		disabled: {
 			true: "opacity-50 bg-gray-500 pointer-events-none",
 		},
-		// shadow: {
-		// 	true: 'shadow-lg shadow-blue-500/50'
-		// }
 	},
 	compoundVariants: [
 		{
@@ -70,7 +67,7 @@ const button = tv({
 		},
 		{
 			variant: "shadow",
-			color: "danger",
+			color: "neutral",
 			class: colorVariants.shadow.neutral,
 		},
 		{
@@ -101,7 +98,7 @@ const button = tv({
 		// bordered / color
 		{
 			variant: "bordered",
-			color: "danger",
+			color: "neutral",
 			class: colorVariants.bordered.neutral,
 		},
 		{
@@ -129,9 +126,133 @@ const button = tv({
 			color: "danger",
 			class: colorVariants.bordered.danger,
 		},
+		// flat / color
+		{
+			variant: "flat",
+			color: "neutral",
+			class: colorVariants.flat.neutral,
+		},
+		{
+			variant: "flat",
+			color: "primary",
+			class: colorVariants.flat.primary,
+		},
+		{
+			variant: "flat",
+			color: "secondary",
+			class: colorVariants.flat.secondary,
+		},
+		{
+			variant: "flat",
+			color: "success",
+			class: colorVariants.flat.success,
+		},
+		{
+			variant: "flat",
+			color: "warning",
+			class: colorVariants.flat.warning,
+		},
+		{
+			variant: "flat",
+			color: "danger",
+			class: colorVariants.flat.danger,
+		},
+		// faded / color
+		{
+			variant: "faded",
+			color: "neutral",
+			class: colorVariants.faded.neutral,
+		},
+		{
+			variant: "faded",
+			color: "primary",
+			class: colorVariants.faded.primary,
+		},
+		{
+			variant: "faded",
+			color: "secondary",
+			class: colorVariants.faded.secondary,
+		},
+		{
+			variant: "faded",
+			color: "success",
+			class: colorVariants.faded.success,
+		},
+		{
+			variant: "faded",
+			color: "warning",
+			class: colorVariants.faded.warning,
+		},
+		{
+			variant: "faded",
+			color: "danger",
+			class: colorVariants.faded.danger,
+		},
+		// light / color
+		{
+			variant: "light",
+			color: "neutral",
+			class: [colorVariants.light.neutral, "hover:!bg-neutral-40"],
+		},
+		{
+			variant: "light",
+			color: "primary",
+			class: [colorVariants.light.primary, "hover:!bg-blue-40"],
+		},
+		{
+			variant: "light",
+			color: "secondary",
+			class: [colorVariants.light.secondary, "hover:!bg-purple-40"],
+		},
+		{
+			variant: "light",
+			color: "success",
+			class: [colorVariants.light.success, "hover:!bg-green-40"],
+		},
+		{
+			variant: "light",
+			color: "warning",
+			class: [colorVariants.light.warning, "hover:!bg-yellow-40"],
+		},
+		{
+			variant: "light",
+			color: "danger",
+			class: [colorVariants.light.danger, "hover:!bg-red-40"],
+		},
+		// ghost / color
+		{
+			variant: "ghost",
+			color: "neutral",
+			class: colorVariants.ghost.neutral,
+		},
+		{
+			variant: "ghost",
+			color: "primary",
+			class: colorVariants.ghost.primary,
+		},
+		{
+			variant: "ghost",
+			color: "secondary",
+			class: colorVariants.ghost.secondary,
+		},
+		{
+			variant: "ghost",
+			color: "success",
+			class: colorVariants.ghost.success,
+		},
+		{
+			variant: "ghost",
+			color: "warning",
+			class: colorVariants.ghost.warning,
+		},
+		{
+			variant: "ghost",
+			color: "danger",
+			class: colorVariants.ghost.danger,
+		},
 	],
 	defaultVariants: {
-		color: "default",
+		color: "neutral",
 		size: "md",
 		variant: "solid",
 		radius: "base",
@@ -145,14 +266,14 @@ const button = tv({
 export type ButtonVariantProps = VariantProps<typeof button>
 
 export const Button = (props: ButtonProps) => {
-	const { children, color, disabled, size, shadow, bordered, variant, icon, as, ...rest } = props;
+	const { children, color, disabled, size, radius, variant, icon, as, ...rest } = props;
 
 	const Component = as || "button";
-
+	
 	return (
 		<Component
 			{...rest}
-			className={`${button({ color, disabled, size, variant })} ${props.className ?? ''}`}
+			className={`${button({ color, disabled, size, radius, variant })} ${props.className ?? ''}`}
 			onClick={props.onClick}
 			disabled={disabled}
 		>

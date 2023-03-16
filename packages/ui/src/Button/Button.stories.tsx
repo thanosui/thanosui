@@ -16,7 +16,7 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
 	children: 'Default',
-	color: 'default',
+	color: 'neutral',
 };
 
 export const Primary = Template.bind({});
@@ -53,22 +53,21 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	children: 'Disabled',
 	disabled: true,
-	color: 'default',
+	color: 'neutral',
 };
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
 	children: 'With Icon',
-	color: 'default',
-	icons: true,
+	color: 'neutral',
 	icon: <HeartIcon />
 };
 
 export const WithShadow = Template.bind({});
 WithShadow.args = {
 	children: 'With Shadow',
-	color: 'default',
-	shadow: true
+	color: 'neutral',
+	variant:'shadow'
 };
 
 // export default {

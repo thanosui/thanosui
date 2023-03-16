@@ -6,7 +6,7 @@ export const HeartIcon = ({
     width,
     label,
     ...props
-}) => {
+}: any) => {
     return (
         <svg
             width={size || width || 24}

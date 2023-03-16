@@ -14,3 +14,6 @@ const Template: ComponentStory<typeof Avatar> = (args) => <Avatar />;
 
 
 export const Default = Template.bind({});
+Default.args = {
+  src: 'https://i.pravatar.cc/300?u=a042581f4e29026709d'
+}
