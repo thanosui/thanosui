@@ -1,0 +1,37 @@
+import { Button, Card, Spacer} from "ui"; 
+
+# Spacer
+Provide empty space.
+
+## Vertical
+<Card />
+<Spacer height={4}></Spacer>
+<Card />
+```jsx
+import { Spacer, Card } from "@thanosui";
+
+export default function App() {
+  return (
+    <>
+      <Card css={{ $$cardColor: '$colors$primary' }}>
+        <Card.Body>
+          <Spacer y={1} />
+        </Card.Body>
+      </Card>
+      <Spacer y={1} />
+      <Card css={{ $$cardColor: '$colors$primary' }}>
+        <Card.Body>
+          <Spacer y={2} />
+        </Card.Body>
+      </Card>
+      <Spacer y={1} />
+      <Card css={{ $$cardColor: '$colors$primary' }}>
+        <Card.Body>
+          <Spacer y={3} />
+        </Card.Body>
+      </Card>
+    </>
+  );
+}
+
+```

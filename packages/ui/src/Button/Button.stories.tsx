@@ -67,7 +67,7 @@ export const WithShadow = Template.bind({});
 WithShadow.args = {
 	children: 'With Shadow',
 	color: 'neutral',
-	variant:'shadow'
+	variant: 'shadow'
 };
 
 // export default {
