@@ -197,7 +197,7 @@ const avatar = tv({
 export type AvatarVariantProps = VariantProps<typeof avatar>;
 export type AvatarSlots = keyof ReturnType<typeof avatar>;
 
-interface AvatarProps extends AvatarVariantProps {
+export interface AvatarProps extends AvatarVariantProps {
     className?: string
     src: string
 }

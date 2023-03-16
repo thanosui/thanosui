@@ -1,6 +1,6 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory, Story } from '@storybook/react';
 
-import { Avatar } from './Avatar';
+import { Avatar, AvatarProps } from './Avatar';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -10,7 +10,7 @@ export default {
 } as ComponentMeta<typeof Avatar>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar />;
+const Template: Story<AvatarProps> = (args) => <Avatar  {...args} />;
 
 
 export const Default = Template.bind({});
