@@ -1,10 +1,11 @@
 import { Button } from "ui";
+import { HeartIcon } from "../../../components/HeartIcon";
 
 # Button
 
 Buttons allow users to perform actions and choose with a single tap.
 
-```bash
+```jsx
 import { Button } from "@thanosui";
 ```
 
@@ -14,21 +15,66 @@ import { Button } from "@thanosui";
 
 ## Disabled
 
-<Button  disabled={true} >Button</Button>
+<Button disabled>Button</Button>
 
 ## Sizes
 
-<Button  size="sm" >Button</Button>
-<Button  size="md" >Button</Button>
-<Button  size="lg" >Button</Button>
+<Button size="xs">xs</Button>
+<Button size="sm">sm</Button>
+<Button size="md">md</Button>
+<Button size="lg">lg</Button>
+<Button size="xl">xl</Button>
 
 ## Colors
 
-<Button  color="primary" >Button</Button>
-<Button  color="secondary" >Button</Button>
-<Button  color="success" >Button</Button>
-<Button  color="warning" >Button</Button>
-<Button  color="error" >Button</Button>
+<Button color="default">Default</Button>
+<Button color="primary">Primary</Button>
+<Button color="secondary">Secondary</Button>
+<Button color="success">Success</Button>
+<Button color="warning">Warning</Button>
+<Button color="danger">Danger</Button>
+
+## With icon
+
+<Button color="primary" icon={<HeartIcon />}>
+  With icon
+</Button>
+
+## With shadow
+
+<Button color="primary" variant="shadow">
+  Primary
+</Button>
+<Button color="secondary" shadow>
+  Secondary
+</Button>
+<Button color="success" shadow>
+  Success
+</Button>
+<Button color="warning" shadow>
+  Warning
+</Button>
+<Button color="danger" shadow>
+  Danger
+</Button>
+
+## Bordered
+
+<Button color="primary" variant="bordered">
+  Primary
+</Button>
+<Button color="secondary" bordered>
+  Secondary
+</Button>
+<Button color="success" bordered>
+  Success
+</Button>
+<Button color="warning" bordered>
+  Warning
+</Button>
+<Button color="danger" bordered>
+  Danger
+</Button>
 
 ## Button Props
 

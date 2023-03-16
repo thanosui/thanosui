@@ -1,5 +1,5 @@
 import "../globals.css";
-import "ui/styles.css";
+// import "ui/styles.css";
 
 
 import type { AppProps } from "next/app";
