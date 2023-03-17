@@ -2,6 +2,7 @@ import { Card,Button, Spacer } from "ui";
 
 # Card
 
+## default
 <Card variant='primary'>
     <Card.Header>
         Card Title 
@@ -15,22 +16,55 @@ import { Card,Button, Spacer } from "ui";
         </Button>
         <Button size="sm">Agree</Button>
     </Card.Footer>
-    {/* <div className="p-4">
-        <h2 className="text-xl font-bold mb-2">Card Title</h2>
-        <p className="text-gray-700">This is the content of the card.</p>
-    </div> */}
 </Card>
 <Spacer height={2} />
-<Card variant="primary">
-    <div className="p-4">
-        <h2 className="text-xl font-bold mb-2">Primary Card</h2>
-        <p className="text-gray-700">This is the content of the primary card.</p>
-    </div>
+
+## shadow
+<Card variant="shadow">
+     <Card.Header>
+        Primary Card Title 
+    </Card.Header>
+    <Card.Body>
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </Card.Body>
+    <Card.Footer>
+        <Button size="sm" light>
+        Cancel
+        </Button>
+        <Button size="sm">Agree</Button>
+    </Card.Footer>
 </Card>
 <Spacer height={2} />
-<Card variant="error">
-    <div className="p-4">
-        <h2 className="text-xl font-bold mb-2">Error Card</h2>
-        <p className="text-gray-700">This is the content of the error card.</p>
-    </div>
+
+## flat
+<Card variant="flat">
+     <Card.Header>
+       Error Card Title 
+    </Card.Header>
+    <Card.Body>
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </Card.Body>
+    <Card.Footer>
+        <Button size="sm" light>
+        Cancel
+        </Button>
+        <Button size="sm">Agree</Button>
+    </Card.Footer>
+</Card>
+<Spacer height={2} />
+
+## bordered
+<Card variant="bordered">
+     <Card.Header>
+       Error Card Title 
+    </Card.Header>
+    <Card.Body>
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </Card.Body>
+    <Card.Footer>
+        <Button size="sm" light>
+        Cancel
+        </Button>
+        <Button size="sm">Agree</Button>
+    </Card.Footer>
 </Card>

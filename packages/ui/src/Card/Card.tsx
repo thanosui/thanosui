@@ -1,7 +1,6 @@
 import { FC, ReactNode } from "react";
 import { type VariantProps, tv } from "tailwind-variants";
 
-
 const card = tv({
     base: 'bg-white text-black rounded-xl overflow-hidden shadow-md',
     variants: {
@@ -21,16 +20,15 @@ const card = tv({
             true: ''
         }
     },
-    compoundVariants: [
-        {
+    // compoundVariants: [
+    //     {
 
-        }
-    ],
+    //     }
+    // ],
     defaultVariants: {
         variant: 'default',
     },
 });
-
 
 
 type CardHeaderProps = {
