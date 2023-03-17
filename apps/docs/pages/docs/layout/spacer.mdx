@@ -4,9 +4,19 @@ import { Button, Card, Spacer} from "ui";
 Provide empty space.
 
 ## Vertical
-<Card />
+<Card variant='primary'>
+    <div className="p-4">
+        <h2 className="text-xl font-bold mb-2">Card Title</h2>
+        <p className="text-gray-700">This is the content of the card.</p>
+    </div>
+</Card>
 <Spacer height={4}></Spacer>
-<Card />
+<Card variant='primary'>
+    <div className="p-4">
+        <h2 className="text-xl font-bold mb-2">Card Title</h2>
+        <p className="text-gray-700">This is the content of the card.</p>
+    </div>
+</Card>
 ```jsx
 import { Spacer, Card } from "@thanosui";
 

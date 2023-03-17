@@ -50,8 +50,8 @@ const spacer = tv({
     },
     compoundVariants: [],
     defaultVariants: {
-        height: 0,
-        width: 0,
+        height: 2,
+        width: 2,
     },
 });
 
