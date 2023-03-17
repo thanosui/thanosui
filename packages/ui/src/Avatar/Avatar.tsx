@@ -2,40 +2,41 @@ import { type VariantProps, tv } from 'tailwind-variants';
 import { colorVariants } from '../utils/variants';
 
 const avatar = tv({
-    slots: {
-        base: [
-            "flex",
-            "relative",
-            "justify-center",
-            "items-center",
-            "box-border",
-            "overflow-hidden",
-            "align-middle",
-            "text-white",
-            "z-10",
-        ],
-        img: [
-            "flex",
-            "object-cover",
-            "w-full",
-            "h-full",
-            "transition-opacity",
-            "!duration-500",
-            "opacity-0",
-            "data-[loaded=true]:opacity-100",
-        ],
-        fallback: ["flex", "items-center", "justify-center"], //...translateCenterClasses,
-        name: ["font-semibold", "text-center", "text-inherit"],//...translateCenterClasses,
-        icon: [
-            //...translateCenterClasses,
-            "flex",
-            "items-center",
-            "justify-center",
-            "text-inherit",
-            "w-full",
-            "h-full",
-        ],
-    },
+    base: "inline-block h-6 w-6 rounded-full ring-2 ring-white",
+    // slots: {
+    //     // base: [
+    //     //     "flex",
+    //     //     "relative",
+    //     //     "justify-center",
+    //     //     "items-center",
+    //     //     "box-border",
+    //     //     "overflow-hidden",
+    //     //     "align-middle",
+    //     //     "text-white",
+    //     //     "z-10",
+    //     // ],
+    //     // img: [
+    //     //     "flex",
+    //     //     "object-cover",
+    //     //     "w-full",
+    //     //     "h-full",
+    //     //     "transition-opacity",
+    //     //     "!duration-500",
+    //     //     "opacity-0",
+    //     //     "data-[loaded=true]:opacity-100",
+    //     // ],
+    //     // fallback: ["flex", "items-center", "justify-center"], //...translateCenterClasses,
+    //     // name: ["font-semibold", "text-center", "text-inherit"],//...translateCenterClasses,
+    //     // icon: [
+    //     //     //...translateCenterClasses,
+    //     //     "flex",
+    //     //     "items-center",
+    //     //     "justify-center",
+    //     //     "text-inherit",
+    //     //     "w-full",
+    //     //     "h-full",
+    //     // ],
+    // },
     variants: {
         size: {
             xs: {
@@ -103,31 +104,31 @@ const avatar = tv({
                 base: "rounded-full",
             },
         },
-        isBordered: {
-            true: {
-                base: "ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark",
-            },
-        },
-        isDisabled: {
-            true: {
-                base: "opacity-50",
-            },
-        },
-        isFocusVisible: {
-            true: {
-                base: [], //...ringClasses
-            },
-        },
-        isInGroup: {
-            true: {
-                base: "-ml-2 hover:-translate-x-3 transition-transform",
-            },
-        },
-        isInGridGroup: {
-            true: {
-                base: "m-0 hover:translate-x-0",
-            },
-        },
+        // isBordered: {
+        //     true: {
+        //         base: "ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark",
+        //     },
+        // },
+        // isDisabled: {
+        //     true: {
+        //         base: "opacity-50",
+        //     },
+        // },
+        // isFocusVisible: {
+        //     true: {
+        //         base: [], //...ringClasses
+        //     },
+        // },
+        // isInGroup: {
+        //     true: {
+        //         base: "-ml-2 hover:-translate-x-3 transition-transform",
+        //     },
+        // },
+        // isInGridGroup: {
+        //     true: {
+        //         base: "m-0 hover:translate-x-0",
+        //     },
+        // },
     },
     defaultVariants: {
         size: "md",
