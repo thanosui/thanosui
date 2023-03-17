@@ -1,0 +1,29 @@
+import { Button, Container, Card, Spacer} from "ui"; 
+
+# Container
+A component for fixing an element's width to the current breakpoint.
+
+## Default
+Container which sets a `max-width` and a default `gap` at each responsive breakpoint
+<Spacer/>
+<Container>
+    <Card variant='primary'>
+        <div className="p-4">
+            <h2 className="text-xl font-bold mb-2">Card Title</h2>
+            <p className="text-gray-700">This is the content of the card.</p>
+        </div>
+    </Card>
+</Container >
+
+```jsx
+import { Container } from "@thanosui";
+
+export default function App() {
+  return (
+      <Container>
+        <Card></Card>
+      </Container>
+  );
+}
+
+```
