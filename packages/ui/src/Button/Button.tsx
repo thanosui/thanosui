@@ -1,6 +1,10 @@
 import { type VariantProps, tv } from 'tailwind-variants';
 import { ButtonProps } from './types';
 import { colorVariants } from '../utils/variants';
+import { AnimatePresence, motion } from "framer-motion"
+import { useState } from 'react';
+import Ripple from './Ripple';
+import cx from '../utils/cx';
 
 const button = tv({
 	base: [
@@ -269,16 +273,67 @@ export const Button = (props: ButtonProps) => {
 	const { children, color, disabled, size, radius, variant, icon, as, ...rest } = props;
 
 	const Component = as || "button";
-	
+
+	// 	return (
+	// 		<motion.button
+	// 			{...rest}
+	// 			className={`${button({ color, disabled, size, radius, variant })} ${props.className ?? ''}`}
+	// 			onClick={props.onClick}
+	// 			// disabled={disabled}
+	// 			whileHover={{ scale: 1.1 }}
+	// 			whileTap={{ scale: 0.9 }}
+	// 		>
+	// 			{icon && <span className="mr-2">{icon}</span>}
+	// 			{children}
+	// 		</motion.button>
+	// 		// <Component
+	// 		// 	{...rest}
+	// 		// 	className={`${button({ color, disabled, size, radius, variant })} ${props.className ?? ''}`}
+	// 		// 	onClick={props.onClick}
+	// 		// 	disabled={disabled}
+	// 		// >
+	// 		// 	{icon && <span className="mr-2">{icon}</span>}
+	// 		// 	{children}
+	// 		// </Component>
+	// 	);
+
+	/// #2
+	const [ripples, setRipples] = useState<{ x: number, y: number, color: string }[]>([]);
+
+	const handleClick = (e: any) => {
+		const rect = e.target.getBoundingClientRect();
+		const x = e.clientX - rect.left;
+		const y = e.clientY - rect.top;
+
+		setRipples((prevRipples: any) => [
+			...prevRipples,
+			{ x, y, color: "rgba(255, 255, 255, 0.5)" },
+		]);
+
+	}
+
+	const baseStyles = cx(
+		'transition duration-100',
+		button({ color, disabled, size, radius, variant }),
+		props.className)
+
 	return (
-		<Component
+		<motion.button
 			{...rest}
-			className={`${button({ color, disabled, size, radius, variant })} ${props.className ?? ''}`}
-			onClick={props.onClick}
+			whileHover={{ scale: 1.05 }}
+			whileTap={{ scale: 0.95 }}
+			// style={{ backgroundColor: "blue", color: "white", padding: "10px" }}
+			onClick={handleClick}
+			className={baseStyles}
+			//@ts-ignore
 			disabled={disabled}
 		>
 			{icon && <span className="mr-2">{icon}</span>}
 			{children}
-		</Component>
+			{ripples.map(item =>
+				<Ripple {...item} />
+			)}
+		</motion.button>
 	);
-};
+
+}; 
