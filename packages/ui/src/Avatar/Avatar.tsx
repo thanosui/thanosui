@@ -1,114 +1,57 @@
 import { type VariantProps, tv } from 'tailwind-variants';
 import { colorVariants } from '../utils/variants';
+import cx from '../utils/cx';
+import { ReactNode } from 'react';
 
 const avatar = tv({
-    base: "inline-block h-6 w-6 rounded-full ring-2 ring-white",
-    // slots: {
-    //     // base: [
-    //     //     "flex",
-    //     //     "relative",
-    //     //     "justify-center",
-    //     //     "items-center",
-    //     //     "box-border",
-    //     //     "overflow-hidden",
-    //     //     "align-middle",
-    //     //     "text-white",
-    //     //     "z-10",
-    //     // ],
-    //     // img: [
-    //     //     "flex",
-    //     //     "object-cover",
-    //     //     "w-full",
-    //     //     "h-full",
-    //     //     "transition-opacity",
-    //     //     "!duration-500",
-    //     //     "opacity-0",
-    //     //     "data-[loaded=true]:opacity-100",
-    //     // ],
-    //     // fallback: ["flex", "items-center", "justify-center"], //...translateCenterClasses,
-    //     // name: ["font-semibold", "text-center", "text-inherit"],//...translateCenterClasses,
-    //     // icon: [
-    //     //     //...translateCenterClasses,
-    //     //     "flex",
-    //     //     "items-center",
-    //     //     "justify-center",
-    //     //     "text-inherit",
-    //     //     "w-full",
-    //     //     "h-full",
-    //     // ],
-    // },
+    base: [
+        // "inline-block",
+        // "h-6",
+        // "w-6",
+        // "rounded-full",
+        // "border-2",
+        // "border-white-500"
+        "flex",
+
+        "relative",
+        "justify-center",
+        "items-center",
+        "box-border",
+        "overflow-hidden",
+        "align-middle",
+        "text-white",
+        "z-10",
+    ],
     variants: {
         size: {
-            xs: {
-                base: "w-7 h-7 text-[0.625rem]",
-            },
-            sm: {
-                base: "w-8 h-8 text-xs",
-            },
-            md: {
-                base: "w-10 h-10 text-xs",
-            },
-            lg: {
-                base: "w-12 h-12 text-sm",
-            },
-            xl: {
-                base: "w-16 h-16 text-md",
-            },
+            xs: "w-7 h-7 text-[0.625rem]",
+            sm: "w-8 h-8 text-xs",
+            md: "w-10 h-10 text-xs",
+            lg: "w-12 h-12 text-sm",
+            xl: "w-16 h-16 text-md",
         },
         color: {
-            neutral: {
-                base: colorVariants.solid.neutral,
-            },
-            primary: {
-                base: colorVariants.solid.primary,
-            },
-            secondary: {
-                base: colorVariants.solid.secondary,
-            },
-            success: {
-                base: colorVariants.solid.success,
-            },
-            warning: {
-                base: colorVariants.solid.warning,
-            },
-            danger: {
-                base: colorVariants.solid.danger,
-            },
+            neutral: colorVariants.solid.neutral,
+            primary: colorVariants.solid.primary,
+            secondary: colorVariants.solid.secondary,
+            success: colorVariants.solid.success,
+            warning: colorVariants.solid.warning,
+            danger: colorVariants.solid.danger//'border-red-300',//colorVariants.solid.danger,
         },
         radius: {
-            none: {
-                base: "rounded-none",
-            },
-            base: {
-                base: "rounded",
-            },
-            sm: {
-                base: "rounded-sm",
-            },
-            md: {
-                base: "rounded-md",
-            },
-            lg: {
-                base: "rounded-lg",
-            },
-            xl: {
-                base: "rounded-xl",
-            },
-            "2xl": {
-                base: "rounded-2xl",
-            },
-            "3xl": {
-                base: "rounded-3xl",
-            },
-            full: {
-                base: "rounded-full",
-            },
+            none: "rounded-none",
+            base: "rounded",
+            sm: "rounded-sm",
+            md: "rounded-md",
+            lg: "rounded-lg",
+            xl: "rounded-xl",
+            "2xl": "rounded-2xl",
+            "3xl": "rounded-3xl",
+            full: "rounded-full",
         },
-        // isBordered: {
-        //     true: {
-        //         base: "ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark",
-        //     },
-        // },
+        isBordered: {
+            true: "border-2 border-offset-2 border-offset-background dark:border-offset-background-dark"
+        },
         // isDisabled: {
         //     true: {
         //         base: "opacity-50",
@@ -130,69 +73,53 @@ const avatar = tv({
         //     },
         // },
     },
-    defaultVariants: {
-        size: "md",
-        color: "neutral",
-        radius: "full",
-    },
     compoundVariants: [
         {
             color: "neutral",
             isBordered: true,
-            class: {
-                base: "ring-neutral",
-            },
+            class: "border-neutral-300",
         },
         {
             color: "primary",
             isBordered: true,
-            class: {
-                base: "ring-primary",
-            },
+            class: "border-blue-300",
         },
         {
             color: "secondary",
             isBordered: true,
-            class: {
-                base: "ring-secondary",
-            },
+            class: "border-blue-300",
         },
         {
             color: "success",
             isBordered: true,
-            class: {
-                base: "ring-success",
-            },
+            class: "border-green-300",
         },
         {
             color: "warning",
             isBordered: true,
-            class: {
-                base: "ring-warning",
-            },
+            class: "border-yellow-00",
         },
         {
             color: "danger",
             isBordered: true,
-            class: {
-                base: "ring-danger",
-            },
+            class: "border-red-300",
         },
         {
             isBordered: true,
             size: "xl",
-            class: {
-                base: "ring",
-            },
+            class: "ring",
         },
         {
             isInGroup: true,
             isFocusVisible: true,
-            class: {
-                base: "-translate-x-3",
-            },
+            class: "-translate-x-3",
         },
     ],
+    defaultVariants: {
+        size: "md",
+        color: "neutral",
+        radius: "full"
+    },
 });
 
 export type AvatarVariantProps = VariantProps<typeof avatar>;
@@ -201,14 +128,24 @@ export type AvatarSlots = keyof ReturnType<typeof avatar>;
 export interface AvatarProps extends AvatarVariantProps {
     className?: string
     src: string
+    text: string
+    isBordered?: boolean
 }
-export const Avatar = (props: AvatarProps) => {
-    const { size, color, radius, className, ...rest } = props;
 
+export const Avatar = (props: AvatarProps) => {
+    const { size, color, radius, className, src, text, isBordered, ...rest } = props;
+
+    const baseStyles = cx(avatar({ size, color, radius, isBordered }), className);
     return (
-        <img
-            {...rest}
-            className={`${avatar({ size, color, radius })} ${className ?? ''}`}
-        />
+        <span className={baseStyles}>
+            {text}
+            {src &&
+                <img
+                    src={src}
+                    className='rounded-full duration-0 transition hover:scale-150'
+                // className={baseStyles}
+                />
+            }
+        </span>
     )
 }

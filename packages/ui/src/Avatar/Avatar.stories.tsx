@@ -6,7 +6,25 @@ import { Avatar, AvatarProps } from './Avatar';
 export default {
   title: 'Components/Avatar',
   component: Avatar,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  argTypes: {
+    isBordered: {
+      type: 'boolean'
+    },
+    size: {
+      control: 'select',
+      options: [
+        "none",
+        "base",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "2xl",
+        "3xl",
+        "full"
+      ]
+    },
+  }
 } as ComponentMeta<typeof Avatar>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

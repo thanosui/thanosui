@@ -3,9 +3,46 @@ import { Avatar,Spacer } from "ui";
 # Avatar
 
 ## Default
-<Spacer height={2}/>
-<Avatar src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
-<Spacer width={2}/>
-<Avatar src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
-<Spacer width={2}/>
-<Avatar src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+<Spacer />
+
+<div style={{display:'flex', gap:8}}>
+<Avatar size='lg' src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+ 
+<Avatar size='lg' color="neutral" text="GER"/>
+ 
+<Avatar size='lg' src='https://i.pravatar.cc/300?u=a042581f4e29026709d' radius="md"/>
+
+<Avatar size='lg' isBordered color="neutral" text="G"/>
+</div>
+## Size
+<Spacer />
+<div style={{display:'flex', gap:8}}>
+    <Avatar size="xs" color="neutral" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+    <Avatar size="sm" color="primary" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+    <Avatar size="md" color="secondary" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+    <Avatar size="lg" color="success" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+    <Avatar size="xl" color="warning" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+</div>
+
+## Color
+<Spacer />
+<div style={{display:'flex', gap:8}}>
+<Avatar text="T" size='lg' color="neutral"/>
+<Avatar text="H" size='lg' color="primary"/>
+<Avatar text="A" size='lg' color="secondary"/>
+<Avatar text="N" size='lg' color="success"/>
+<Avatar text="O" size='lg' color="warning"/>
+<Avatar text="S" size='lg' color="danger"/>
+</div>
+
+## Bordered
+<Spacer />
+<div style={{display:'flex', gap:8}}>
+<Avatar size='lg' isBordered color="neutral" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+<Avatar size='lg' isBordered color="primary" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+<Avatar size='lg' isBordered color="secondary" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+<Avatar size='lg' isBordered color="success" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+<Avatar size='lg' isBordered color="warning" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+<Avatar size='lg' isBordered color="danger" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/>
+</div>
+{/* <Avatar size="xs" color="danger" src='https://i.pravatar.cc/300?u=a042581f4e29026709d'/> */}
