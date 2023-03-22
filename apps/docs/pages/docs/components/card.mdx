@@ -3,68 +3,87 @@ import { Card,Button, Spacer } from "ui";
 # Card
 
 ## default
-<Card variant='default'>
-    <Card.Header>
-        Card Title 
-    </Card.Header>
+<Spacer/>
+
+<Card>
     <Card.Body>
         Some quick example text to build on the card title and make up the bulk of the card's content.
     </Card.Body>
-    <Card.Footer>
-        <Button size="sm" light>
-        Cancel
-        </Button>
-        <Button size="sm">Agree</Button>
-    </Card.Footer>
 </Card>
 <Spacer height={2} />
 
 ## shadow
+<Spacer/>
+
 <Card variant="shadow">
-     <Card.Header>
-        Primary Card Title 
-    </Card.Header>
     <Card.Body>
         Some quick example text to build on the card title and make up the bulk of the card's content.
     </Card.Body>
-    <Card.Footer>
-        <Button size="sm" light>
-        Cancel
-        </Button>
-        <Button size="sm">Agree</Button>
-    </Card.Footer>
 </Card>
 <Spacer height={2} />
 
 ## flat
+<Spacer/>
+
 <Card variant="flat">
-     <Card.Header>
-       Error Card Title 
-    </Card.Header>
     <Card.Body>
         Some quick example text to build on the card title and make up the bulk of the card's content.
     </Card.Body>
-    <Card.Footer>
-        <Button size="sm" light>
-        Cancel
-        </Button>
-        <Button size="sm">Agree</Button>
-    </Card.Footer>
 </Card>
 <Spacer height={2} />
 
+## Hoverable
+<Spacer/>
+
+<Card isHoverable>
+    <Card.Body>
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </Card.Body>
+</Card>
+
+## Pressable
+<Spacer/>
+
+<Card isPressable>
+    <Card.Body>
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </Card.Body>
+</Card>
+
 ## bordered
+<Spacer/>
+
 <Card variant="bordered">
-     <Card.Header>
-       Error Card Title 
+    <Card.Body>
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </Card.Body>
+</Card>
+
+## With Footer
+<Spacer/>
+<Card>
+    <Card.Header>
+        Some quick example text to build on the card title and make up the bulk of the card's content.
     </Card.Header>
     <Card.Body>
         Some quick example text to build on the card title and make up the bulk of the card's content.
     </Card.Body>
     <Card.Footer>
-        <Button size="sm" light>
-        Cancel
-        </Button>
-        <Button size="sm">Agree</Button>
+        Visit source code on GitHub.
     </Card.Footer>
+</Card>
+
+## With Image
+<Spacer/>
+<Card>
+    <Card.Header>
+       What to watch
+     
+          Stream the Acme event
+      
+    </Card.Header>
+    <Card.Image
+      src="https://nextui.org/images/card-example-4.jpeg"
+      alt="Card image background"
+    />
 </Card>

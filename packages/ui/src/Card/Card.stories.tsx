@@ -10,6 +10,5 @@ const Template: Story<CardProps> = args => <Card  {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    children: 'sdas',
-    variant: 'primary'
+    children: 'Hellod',
 }
