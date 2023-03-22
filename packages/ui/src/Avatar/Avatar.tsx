@@ -87,7 +87,7 @@ const avatar = tv({
         {
             color: "secondary",
             isBordered: true,
-            class: "border-blue-300",
+            class: "border-purple-300",
         },
         {
             color: "success",
