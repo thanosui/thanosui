@@ -272,30 +272,7 @@ export type ButtonVariantProps = VariantProps<typeof button>
 export const Button = (props: ButtonProps) => {
 	const { children, color, disabled, size, radius, variant, icon, as, ...rest } = props;
 
-	const Component = as || "button";
-
-	// 	return (
-	// 		<motion.button
-	// 			{...rest}
-	// 			className={`${button({ color, disabled, size, radius, variant })} ${props.className ?? ''}`}
-	// 			onClick={props.onClick}
-	// 			// disabled={disabled}
-	// 			whileHover={{ scale: 1.1 }}
-	// 			whileTap={{ scale: 0.9 }}
-	// 		>
-	// 			{icon && <span className="mr-2">{icon}</span>}
-	// 			{children}
-	// 		</motion.button>
-	// 		// <Component
-	// 		// 	{...rest}
-	// 		// 	className={`${button({ color, disabled, size, radius, variant })} ${props.className ?? ''}`}
-	// 		// 	onClick={props.onClick}
-	// 		// 	disabled={disabled}
-	// 		// >
-	// 		// 	{icon && <span className="mr-2">{icon}</span>}
-	// 		// 	{children}
-	// 		// </Component>
-	// 	);
+	const Component = as || "button"
 
 	/// #2
 	const [ripples, setRipples] = useState<{ x: number, y: number, color: string }[]>([]);
@@ -322,7 +299,6 @@ export const Button = (props: ButtonProps) => {
 			{...rest}
 			whileHover={{ scale: 1.05 }}
 			whileTap={{ scale: 0.95 }}
-			// style={{ backgroundColor: "blue", color: "white", padding: "10px" }}
 			onClick={handleClick}
 			className={baseStyles}
 			//@ts-ignore
