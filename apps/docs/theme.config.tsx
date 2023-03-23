@@ -1,6 +1,7 @@
 import React from "react";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 import DarkModeSwitcher from "./components/DarkModeSwitcher";
+import { Badge } from "ui";
 
 const config: DocsThemeConfig = {
     darkMode: true,
@@ -24,7 +25,7 @@ const config: DocsThemeConfig = {
             <span style={{ marginLeft: '.4em', fontWeight: 800 }}>
                 Thanos UI
             </span>
-
+            <Badge>Beta</Badge>
         </>
     ),
 
