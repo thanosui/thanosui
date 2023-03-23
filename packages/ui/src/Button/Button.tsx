@@ -3,7 +3,7 @@ import { ButtonProps } from './types';
 import { colorVariants } from '../utils/variants';
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from 'react';
-import Ripple from './Ripple';
+import Ripple from '../Ripple';
 import cx from '../utils/cx';
 
 const button = tv({
