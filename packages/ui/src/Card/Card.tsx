@@ -1,48 +1,26 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useState, MouseEvent, } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
-
-// const card = tv({
-//     base: 'p-3 bg-white text-black rounded-xl overflow-hidden shadow-md',
-//     variants: {
-//         variant: {
-//             default: 'border-gray-300',
-//             shadow: 'border-gray-300',
-//             flat: 'border-blue-500',
-//             bordered: 'border-purple-500',
-//             // success: 'border-green-500',
-//             // warning: 'border-yellow-500',
-//             // error: 'border-red-500',
-//         },
-//         color: {
-//             neutral: colorVariants.solid.neutral,
-//             primary: colorVariants.solid.primary,
-//             secondary: colorVariants.solid.secondary,
-//             success: colorVariants.solid.success,
-//             warning: colorVariants.solid.warning,
-//             danger: colorVariants.solid.danger
-//         },
-//         isHoverable: {
-//             true: ''
-//         },
-//         isPressable: {
-//             true: ''
-//         }
-//     },
-//     // compoundVariants: [
-//     //     {
-
-//     //     }
-//     // ],
-//     defaultVariants: {
-//         variant: 'default',
-//     },
-// });
+import Ripple from "../Ripple";
+import { useDrip } from "../Drip/useDrip";
+import Drip from "../Drip/Drip";
 
 const card = tv({
     slots: {
         base: [
-            // ...focusVisibleClasses,
-            "flex flex-col m-0 p-0 relative overflow-hidden w-full height-auto bg-white text-foreground rounded-xl box-border dark:bg-neutral-900 dark:text-foreground-dark",
+            "bg-white",
+            "dark:bg-slate-800",
+            "flex",
+            "flex-col",
+            "m-0",
+            "p-0",
+            "relative",
+            "overflow-hidden",
+            "w-full",
+            "height-auto",
+            "text-slate-900",
+            "rounded-xl",
+            "box-border",
+            "dark:text-white"
         ],
         body: "px-4 py-6",
         footer: "px-4 py-4",
@@ -173,11 +151,20 @@ type CardSubComponents = {
 }
 
 export const Card: FC<CardProps> & CardSubComponents = (props) => {
+    const { drips, onClick } = useDrip()
     const { children, variant, isHoverable, isPressable, disableAnimation, ...rest } = props;
 
+    const handleClick = (event: MouseEvent<HTMLElement>) => {
+        onClick(event)
+    }
+
     return (
-        <div className={card({ variant, isHoverable, isPressable, disableAnimation }).base()}>
+        <div
+            className={card({ variant, isHoverable, isPressable, disableAnimation }).base()}
+            onClick={handleClick}
+        >
             {children}
+            {isPressable && <Drip drips={drips} />}
         </div>
     )
 }
