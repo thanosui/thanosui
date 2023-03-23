@@ -1,11 +1,12 @@
 import React from "react";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
+import DarkModeSwitcher from "./components/DarkModeSwitcher";
 
 const config: DocsThemeConfig = {
     darkMode: true,
-    nextThemes: {
-      defaultTheme: "dark",
-    },
+    // nextThemes: {
+    //     defaultTheme: "dark",
+    // },
     banner: {
         key: '2.0-release',
         text: <a href="https://nextra.site" target="_blank">
@@ -23,6 +24,7 @@ const config: DocsThemeConfig = {
             <span style={{ marginLeft: '.4em', fontWeight: 800 }}>
                 Thanos UI
             </span>
+
         </>
     ),
 
@@ -39,7 +41,26 @@ const config: DocsThemeConfig = {
             MIT {new Date().getFullYear()} © <a href="https://nextra.site" target="_blank">Smug</a>.
         </span>,
     },
-   
+
+    // themeSwitch: {
+
+    //     // useOptions: () => {
+    //     //     ({
+    //     //         light: '',
+    //     //         dark: 'Dark',
+    //     //         system: 'System'
+    //     //     })
+    //     // }
+    //     // component: (props) => <DarkModeSwitcher />,
+    //     // useOptions() {
+    //     //     return {
+    //     //         light: 'Light',
+    //     //         dark: 'Dark',
+    //     //         system: 'System'
+    //     //     }
+    //     // }
+    // }
+
     // primaryHue: {
     //     dark: 302,
     //     light: 203
