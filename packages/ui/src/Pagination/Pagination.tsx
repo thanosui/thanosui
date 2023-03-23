@@ -2,11 +2,21 @@ import { FC } from "react"
 import { type VariantProps, tv } from "tailwind-variants"
 import { Button } from "../Button";
 
-const pagination = tv({
-
+const paginationButton = tv({
+    base: "text-sm rounded-lg mx-1",
+    variants: {
+        color: {
+            default: "text-gray-500 hover:text-gray-700",
+            active: "bg-blue-500 text-white",
+            disabled: "opacity-50 cursor-not-allowed",
+        },
+    },
+    defaultVariants: {
+        color: "default",
+    },
 })
 
-export type PaginationVariantProps = VariantProps<typeof pagination>
+export type PaginationVariantProps = VariantProps<typeof paginationButton>
 
 interface PaginationProps extends PaginationVariantProps {
     className?: string;
@@ -33,10 +43,12 @@ export const Pagination: FC<PaginationProps> = (props) => {
         pageButtons.push(
             <Button
                 key={i}
-                className={`mx-1 ${isCurrent
-                    ? "bg-blue-500 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
-                    }`}
+                className={paginationButton({ color: isCurrent ? "active" : "default" })}
+
+                // className={`mx-1 ${isCurrent
+                //     ? "bg-blue-500 text-white"
+                //     : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
+                //     }`}
                 onClick={() => handlePageClick(i)}
                 disabled={isCurrent}
             >
@@ -48,7 +60,8 @@ export const Pagination: FC<PaginationProps> = (props) => {
     return <>
         <div className={`flex justify-center ${className}`}>
             <Button
-                className="mx-1 bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
+                // className="mx-1 bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
+                className={paginationButton()}
                 onClick={() => handlePageClick(currentPage - 1)}
                 disabled={currentPage <= 1}
             >
@@ -56,7 +69,8 @@ export const Pagination: FC<PaginationProps> = (props) => {
             </Button>
             {pageButtons}
             <Button
-                className="mx-1 bg-white text-gray-700 hover:bg"
+                className={paginationButton()}
+            // className="mx-1 bg-white text-gray-700 hover:bg"
             >
                 Next
             </Button>
