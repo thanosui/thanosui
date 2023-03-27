@@ -269,7 +269,7 @@ const button = tv({
 
 export type ButtonVariantProps = VariantProps<typeof button>
 
-export const Button = (props: IButtonProps) => {
+export const Button = (props: any) => {
 	const { children, color, disabled, className, onClick, size, radius, variant, icon, as, ...rest } = props;
 
 	const Component = as || "button"

@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { FC, ReactNode, useState } from "react";
 
-export const Collapse = ({ title, children }) => {
+interface CollapseProps {
+    title: string
+    children: ReactNode
+}
+
+export const Collapse: FC<CollapseProps> & { Item: typeof Item } = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = () => {
@@ -24,7 +29,7 @@ export const Collapse = ({ title, children }) => {
     );
 };
 
-const Item = ({ name }) => {
+const Item = ({ name }: any) => {
     return <div className="border-b py-2">{name}</div>;
 };
 

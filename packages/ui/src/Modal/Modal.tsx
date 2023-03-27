@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 import { VariantProps, tv } from "tailwind-variants"
 import { Button } from "../Button"
 
@@ -7,13 +7,16 @@ const modal = tv({})
 type ModalVariantProps = VariantProps<typeof modal>
 
 export interface ModalProps extends ModalVariantProps {
-
+    isOpen: boolean
+    title: string
+    onClose: () => void
+    children: ReactNode
 }
 
 export const Modal: FC<ModalProps> = (props) => {
     const { isOpen, title, onClose, children } = props
 
-    const modalStyles = isOpen ? "block" : "hidden"; 
+    const modalStyles = isOpen ? "block" : "hidden";
     return (
         <div className={`${modalStyles} fixed z-10 inset-0 overflow-y-auto`}>
             <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">

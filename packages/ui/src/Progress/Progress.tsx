@@ -6,7 +6,8 @@ const progress = tv({})
 type ProgressVariantProps = VariantProps<typeof progress>
 
 export interface ProgressProps extends ProgressVariantProps {
-
+    value: number
+    max: number
 }
 
 export const Progress: FC<ProgressProps> = (props) => {
