@@ -142,7 +142,7 @@ export const Avatar = (props: AvatarProps) => {
             {src &&
                 <img
                     src={src}
-                    className='rounded-full duration-0 transition hover:scale-150'
+                    className=' duration-0 transition hover:scale-150'
                 // className={baseStyles}
                 />
             }
