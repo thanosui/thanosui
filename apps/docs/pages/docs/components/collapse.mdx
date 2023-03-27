@@ -1,1 +1,11 @@
+import { Collapse,Spacer } from "ui";
 
+# Collapse
+
+## Defaukt
+<Spacer />
+<Collapse title="My Items">
+  {[{ name: 'Item 1' }, { name: 'Item 2' }, { name: 'Item 3' }].map((item) => (
+    <Collapse.Item key={item.name} name={item.name} />
+  ))}
+</Collapse>
