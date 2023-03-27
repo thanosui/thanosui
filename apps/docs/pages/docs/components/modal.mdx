@@ -1,7 +1,21 @@
-import { Modal,Spacer } from "ui";
+import { Modal,Spacer ,Button} from "ui";
+import { useState } from 'react'
+
+export function But({ children }) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+       <Button color="primary" onClick={() => setIsOpen(!isOpen)}>Open modal</Button>
+        <Modal isOpen={isOpen} title="Modal" onClose={()=>setIsOpen(false)}></Modal>
+    </>
+    )
+}
+ 
 
 # Modal
 
 ## Default
 <Spacer />
-<Modal />
+<But/>
+
