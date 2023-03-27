@@ -25,7 +25,11 @@ const navbar = tv({
 type NavbarVariantProps = VariantProps<typeof navbar>
 
 export interface NavbarProps extends NavbarVariantProps {
-
+    links: {
+        name: string
+        href: string
+    }[]
+    logo: string
 }
 
 export const Navbar: FC<NavbarProps> = (props) => {
