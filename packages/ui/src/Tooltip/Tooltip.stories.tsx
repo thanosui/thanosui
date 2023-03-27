@@ -10,5 +10,6 @@ const Template: Story<TooltipProps> = (args) => <Tooltip {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-
+    text: 'Helloo',
+    children: "blaa"
 };
