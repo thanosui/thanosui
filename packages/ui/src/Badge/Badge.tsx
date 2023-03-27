@@ -4,19 +4,12 @@ import { colorVariants } from "../utils/variants"
 
 const badge = tv({
     base: [
-        // "relative",
-        // "inline-flex",
-        // "shrink-0",
-        // "overflow-visible",
-        // "align-middle",
-        // "place-content-center",
-        // "origin-center",
-        // "items-center",
-        // "rounded-full",
-
-        'px-1.5',
-        'ring-1',
-        'ring-slate-200',
+        "align-middle",
+        "place-content-center",
+        "origin-center",
+        "items-center",
+        "text-md",
+        'px-2',
         'rounded'
     ],
     variants: {
@@ -113,11 +106,11 @@ const badge = tv({
         color: "neutral",
         size: "md",
         radius: "full",
-        shape: "rectangle",
-        placement: "top-right",
-        disableOutline: false,
-        disableAnimation: false,
-        isInvisible: false,
+        // shape: "rectangle",
+        // placement: "top-right",
+        // disableOutline: false,
+        // disableAnimation: false,
+        // isInvisible: false,
     }
 })
 

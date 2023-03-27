@@ -12,3 +12,10 @@ export const Default = Template.bind({});
 Default.args = {
 
 };
+
+
+export const Primary = Template.bind({});
+Primary.args = {
+	children: 'Primary',
+	color: 'primary',
+};
