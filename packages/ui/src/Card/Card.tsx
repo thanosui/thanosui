@@ -30,7 +30,7 @@ const card = tv({
         variant: {
             shadow: "drop-shadow-2xl",
             bordered: "border-2 dark:border-slate-300",
-            flat: "bg-neutral-100",
+            flat: '',//"bg-neutral-100",
         },
         borderWeight: {
             light: "",
@@ -54,37 +54,37 @@ const card = tv({
         {
             isHoverable: true,
             disableAnimation: false,
-            class: "duration-200 hover:-translate-y-0.5",
+            className: "duration-200 hover:-translate-y-0.5",
         },
         {
             isPressable: true,
             disableAnimation: false,
-            class: "active:scale-95",
+            className: "active:scale-95",
         },
         {
             variant: "bordered",
             borderWeight: "light",
-            class: "border",
+            className: "border",
         },
         {
             variant: "bordered",
             borderWeight: "normal",
-            class: "border-2",
+            className: "border-2",
         },
         {
             variant: "bordered",
             borderWeight: "bold",
-            class: "border-3",
+            className: "border-3",
         },
         {
             variant: "bordered",
             borderWeight: "extrabold",
-            class: "border-4",
+            className: "border-4",
         },
         {
             variant: "bordered",
             borderWeight: "black",
-            class: "border-5",
+            className: "border-5",
         },
     ],
     defaultVariants: {
@@ -163,7 +163,9 @@ export const Card: FC<CardProps> & CardSubComponents = (props) => {
             className={card({ variant, isHoverable, isPressable, disableAnimation }).base()}
             onClick={handleClick}
         >
-            {children}
+            <div className="backdrop-blur-md">
+                {children}
+            </div>
             {isPressable && <Drip drips={drips} />}
         </div>
     )
