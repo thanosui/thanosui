@@ -28,3 +28,9 @@ export interface ButtonProps extends ButtonVariantProps {
 	// size: "md" | "sm" | "lg" | "xl" | "xs",
 	// variant: "shadow" | "bordered" | "solid" | "light" | "flat" | "faded" | "ghost"
 }
+
+
+export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+	children: ReactNode
+
+}

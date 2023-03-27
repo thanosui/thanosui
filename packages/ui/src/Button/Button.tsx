@@ -1,8 +1,8 @@
 import { type VariantProps, tv } from 'tailwind-variants';
-import { ButtonProps } from './types';
+import { ButtonProps, IButtonProps } from './types';
 import { colorVariants } from '../utils/variants';
 import { AnimatePresence, motion } from "framer-motion"
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 import Ripple from '../Ripple';
 import cx from '../utils/cx';
 
@@ -269,8 +269,8 @@ const button = tv({
 
 export type ButtonVariantProps = VariantProps<typeof button>
 
-export const Button = (props: ButtonProps) => {
-	const { children, color, disabled, size, radius, variant, icon, as, ...rest } = props;
+export const Button = (props: IButtonProps) => {
+	const { children, color, disabled, className, onClick, size, radius, variant, icon, as, ...rest } = props;
 
 	const Component = as || "button"
 
@@ -286,13 +286,13 @@ export const Button = (props: ButtonProps) => {
 			...prevRipples,
 			{ x, y, color: "rgba(255, 255, 255, 0.5)" },
 		]);
-
+		onClick(e)
 	}
 
 	const baseStyles = cx(
 		'transition duration-100',
 		button({ color, disabled, size, radius, variant }),
-		props.className)
+		className)
 
 	return (
 		<motion.button
