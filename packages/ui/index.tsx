@@ -15,3 +15,5 @@ export * from './src/Table';
 export * from './src/Tooltip';
 export * from './src/Badge';
 export * from './src/Text';
+export * from './src/Grid';
+export * from './src/Forms/Input';
