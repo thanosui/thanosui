@@ -35,9 +35,11 @@ export interface NavbarProps extends NavbarVariantProps {
 export const Navbar: FC<NavbarProps> = (props) => {
     const { links, logo, isBordered } = props
 
-    const slots = navbar({ isBordered })
 
-    const baseStyle = cx(slots.base())
+    const { base, item } = navbar({ isBordered })
+    // const slots = navbar({ isBordered })
+
+    const baseStyle = cx(base())
 
     return (
         <nav className={baseStyle}>
