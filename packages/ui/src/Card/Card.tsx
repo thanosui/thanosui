@@ -31,6 +31,7 @@ const card = tv({
             shadow: "drop-shadow-2xl",
             bordered: "border-2 dark:border-slate-300",
             flat: '',//"bg-neutral-100",
+            blured: 'dark:bg-transparent backdrop-blur-md'
         },
         borderWeight: {
             light: "",
@@ -88,7 +89,7 @@ const card = tv({
         },
     ],
     defaultVariants: {
-        // variant: "shadow",
+        // variant: "blured",
         isHoverable: false,
         disableAnimation: false
     },
@@ -163,7 +164,7 @@ export const Card: FC<CardProps> & CardSubComponents = (props) => {
             className={card({ variant, isHoverable, isPressable, disableAnimation }).base()}
             onClick={handleClick}
         >
-            <div className="backdrop-blur-md">
+            <div className="">
                 {children}
             </div>
             {isPressable && <Drip drips={drips} />}
