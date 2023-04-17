@@ -1,14 +1,19 @@
-import { ComponentMeta, ComponentStory, Meta, Story } from '@storybook/react';
-import { Card, CardProps } from './Card';
+import { Meta, StoryObj } from '@storybook/react';
+import { Card } from './Card';
 
-export default {
+const meta: Meta<typeof Card> = {
     title: 'Components/Card',
-    component: Card
-} as Meta<typeof Card>;
+    component: Card,
+    tags: ['autodocs'],
+};
 
-const Template: Story<CardProps> = args => <Card  {...args} />;
+export default meta;
+type Story = StoryObj<typeof Card>;
 
-export const Default = Template.bind({});
-Default.args = {
-    children: 'Hellod',
+export const Default: Story = {
+    render: () => <Card >
+        <Card.Body>
+            This is modal
+        </Card.Body>
+    </Card>,
 }

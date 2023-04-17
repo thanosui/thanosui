@@ -286,7 +286,7 @@ export const Button = (props: any) => {
 			...prevRipples,
 			{ x, y, color: "rgba(255, 255, 255, 0.5)" },
 		]);
-		onClick(e)
+		onClick && onClick(e)
 	}
 
 	const baseStyles = cx(

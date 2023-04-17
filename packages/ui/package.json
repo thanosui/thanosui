@@ -1,61 +1,61 @@
 {
-	"name": "ui",
-	"version": "0.0.0",
-	"license": "MIT",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"sideEffects": false,
-	"files": [
-		"dist/**"
-	],
-	"scripts": {
-		"build": "tsup index.tsx --format esm,cjs --dts --external react",
-		"//de2v": "tsup index.tsx --format esm,cjs --watch --dts --external react",
-		"dev": "start-storybook -p 6006",
-		"lint": "eslint *.ts*",
-		"test": "vitest run",
-		"test:watch": "vitest",
-		"coverage": "vitest run --coverage",
-		"//dev": "tsup --watch",
-		"sb": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.21.3",
-		"@storybook/addon-a11y": "^6.5.16",
-		"@storybook/addon-actions": "^6.5.16",
-		"@storybook/addon-console": "^1.2.3",
-		"@storybook/addon-essentials": "^6.5.16",
-		"@storybook/addon-interactions": "^6.5.16",
-		"@storybook/addon-links": "^6.5.16",
-		"@storybook/addon-postcss": "^2.0.0",
-		"@storybook/addon-storysource": "^6.5.16",
-		"@storybook/addons": "^6.5.16",
-		"@storybook/builder-webpack4": "^6.5.16",
-		"@storybook/manager-webpack4": "^6.5.16",
-		"@storybook/react": "^6.5.16",
-		"@storybook/testing-library": "^0.0.13",
-		"@storybook/theming": "^6.5.16",
-		"@types/react": "^18.0.28",
-		"@types/react-dom": "^18.0.11",
-		"@vitest/coverage-c8": "^0.29.7",
-		"babel-loader": "^8.3.0",
-		"eslint": "^7.32.0",
-		"eslint-config-custom": "workspace:*",
-		"postcss": "^8.4.21",
-		"react": "^18.2.0",
-		"tailwind-config": "workspace:*",
-		"tsconfig": "workspace:*",
-		"tsup": "^6.7.0",
-		"typescript": "^4.9.5",
-		"vitest": "^0.29.7"
-	},
-	"dependencies": {
-		"framer-motion": "^10.8.5",
-		"tailwind-variants": "^0.0.30"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "ui",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup index.tsx --format esm,cjs --dts --external react",
+    "//de2v": "tsup index.tsx --format esm,cjs --watch --dts --external react",
+    "lint": "eslint *.ts*",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "//de22v": "tsup --watch",
+    "sb": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.4",
+    "@storybook/addon-a11y": "^7.0.5",
+    "@storybook/addon-essentials": "^7.0.5",
+    "@storybook/addon-interactions": "^7.0.5",
+    "@storybook/addon-links": "^7.0.5",
+    "@storybook/addon-styling": "^1.0.1",
+    "@storybook/blocks": "^7.0.5",
+    "@storybook/react": "^7.0.5",
+    "@storybook/react-vite": "^7.0.5",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "@vitest/coverage-c8": "^0.30.1",
+    "eslint": "^8.38.0",
+    "eslint-config-custom": "workspace:*",
+    "postcss": "^8.4.21",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.5",
+    "storybook-tailwind-dark-mode": "^1.0.19",
+    "tailwind-config": "workspace:*",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  },
+  "dependencies": {
+    "framer-motion": "^10.12.2",
+    "tailwind-variants": "^0.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

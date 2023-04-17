@@ -1,14 +1,18 @@
-import { Meta, Story } from "@storybook/react";
-import { Progress, ProgressProps } from "./Progress";
+import { Meta, StoryObj } from "@storybook/react";
+import { Progress } from "./Progress";
 
-export default {
-    title: 'components/Progress',
+const meta: Meta<typeof Progress> = {
+    title: 'Components/Progress',
     component: Progress,
-} as Meta;
+    tags: ['autodocs'],
+};
 
-const Template: Story<ProgressProps> = (args) => <Progress {...args} />;
+export default meta;
+type Story = StoryObj<typeof Progress>;
 
-export const Default = Template.bind({});
-Default.args = {
-
+export const Default: Story = {
+    args: {
+        value: 30,
+        max: 100
+    }
 };

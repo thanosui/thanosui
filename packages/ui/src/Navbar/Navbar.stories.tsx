@@ -1,14 +1,32 @@
-import { Meta, Story } from "@storybook/react";
-import { Navbar, NavbarProps } from "./Navbar";
+import { Meta, StoryObj } from "@storybook/react";
+import { Navbar } from "./Navbar";
 
-export default {
-    title: 'components/Navbar',
+const meta: Meta<typeof Navbar> = {
+    title: 'Components/Navbar',
     component: Navbar,
-} as Meta;
+    tags: ['autodocs'],
+};
 
-const Template: Story<NavbarProps> = (args) => <Navbar {...args} />;
+export default meta;
 
-export const Default = Template.bind({});
-Default.args = {
+type Story = StoryObj<typeof Navbar>;
 
+export const Default: Story = {
+    args: {
+        logo: 'https://volta.net/mac/icon.png',
+        links: [
+            {
+                name: 'Home',
+                href: '#'
+            },
+            {
+                name: 'Setvice',
+                href: '#!'
+            },
+            {
+                name: 'Contact',
+                href: '#!'
+            }
+        ]
+    }
 };

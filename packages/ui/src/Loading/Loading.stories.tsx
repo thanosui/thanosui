@@ -1,14 +1,16 @@
-import { Meta, Story } from "@storybook/react";
-import { Loading, LoadingProps } from "./Loading";
+import { Meta, StoryObj } from "@storybook/react";
+import { Loading } from "./Loading";
 
-export default {
-    title: 'components/Loading',
+const meta: Meta<typeof Loading> = {
+    title: 'Components/Loading',
     component: Loading,
-} as Meta;
-
-const Template: Story<LoadingProps> = (args) => <Loading {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-
+    tags: ['autodocs'],
 };
+
+export default meta;
+type Story = StoryObj<typeof Loading>;
+
+export const Default: Story = {
+    args: {
+    }
+}

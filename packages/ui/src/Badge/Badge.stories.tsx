@@ -1,21 +1,24 @@
-import { Meta, Story } from "@storybook/react";
-import { Badge, BadgeProps } from "./Badge";
+import { Meta, StoryObj } from "@storybook/react";
+import { Badge } from "./Badge";
 
-export default {
-    title: 'components/Badge',
+const meta: Meta<typeof Badge> = {
+    title: 'Components/Badge',
     component: Badge,
-} as Meta;
-
-const Template: Story<BadgeProps> = (args) => <Badge {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-
+    tags: ['autodocs'],
 };
 
+export default meta;
+type Story = StoryObj<typeof Badge>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-	children: 'Primary',
-	color: 'primary',
+export const Default: Story = {
+    args: {
+        children: "Default"
+    }
 };
+
+export const Primary: Story = {
+    args: {
+        children: 'Primary',
+        color: 'primary',
+    }
+}

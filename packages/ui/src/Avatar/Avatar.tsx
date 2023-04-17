@@ -128,7 +128,7 @@ export type AvatarSlots = keyof ReturnType<typeof avatar>;
 export interface AvatarProps extends AvatarVariantProps {
     className?: string
     src: string
-    text: string
+    text?: string
     isBordered?: boolean
 }
 
