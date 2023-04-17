@@ -1,5 +1,6 @@
 import './tailwind.css';
 
+export * from './src/Accordion';
 export * from './src/Button';
 export * from './src/Avatar';
 export * from './src/Card';
