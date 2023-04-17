@@ -25,7 +25,7 @@ const config: DocsThemeConfig = {
             <span style={{ marginLeft: '.4em', fontWeight: 800, marginRight: 10 }}>
                 Thanos UI
             </span>
-            <Badge variant={"bordered"} size={"xs"} color={"primary"}>Beta</Badge>
+            <Badge variant={"bordered"} color={"primary"}>Beta</Badge>
         </>
     ),
 
