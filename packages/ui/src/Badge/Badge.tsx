@@ -132,10 +132,10 @@ export interface BadgeProps extends BadgeVariantProps {
 }
 
 export const Badge: FC<BadgeProps> = (props) => {
-    const { color, size, variant, children } = props
+    const { color, variant, children } = props
 
     return <>
-        <span className={badge({ color, size, variant })}>
+        <span className={badge({ color, variant })}>
             <span className="w-1.5 h-1.5 inline-block bg-indigo-400 rounded-full"></span>
             {children}
             <button type="button" className="flex-shrink-0 h-4 w-4 inline-flex items-center justify-center rounded-full text-blue-600 hover:bg-blue-200 hover:text-blue-500 focus:outline-none focus:bg-blue-200 focus:text-blue-500">
