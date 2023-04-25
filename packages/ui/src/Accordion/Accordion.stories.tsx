@@ -1,18 +1,25 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { Accordion } from './Accordion';
 
-export default {
+const meta: Meta<typeof Accordion> = {
 	title: 'Components/Accordion',
-	component: Accordion,
+	// component: Accordion,
 	parameters: {
 		layout: 'centered',
 	},
-} as ComponentMeta<typeof Accordion>;
+};
 
-const Template: ComponentStory<typeof Accordion> = args => <Accordion {...args} />;
+export default meta;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+type Story = StoryObj<typeof Accordion>;
 
-export const Secondary = Template.bind({});
-Secondary.args = {};
+export const Primary: Story = {
+	args: {},
+	render: () => (
+		<Accordion>
+			<Accordion.Item />
+			<Accordion.Item />
+			<Accordion.Item />
+		</Accordion>
+	),
+};

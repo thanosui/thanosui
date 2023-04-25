@@ -1,1 +1,5 @@
-export interface AccordionProps {}
+import { ReactNode } from 'react';
+
+export interface AccordionProps {
+	children: ReactNode;
+}
