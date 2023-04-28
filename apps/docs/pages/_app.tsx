@@ -1,5 +1,5 @@
 import "../globals.css";
-import "ui/tailwind.css";
+import "@thanosui/react/tailwind.css";
 
 
 import type { AppProps } from "next/app";

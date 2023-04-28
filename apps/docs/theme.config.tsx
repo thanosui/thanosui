@@ -1,7 +1,7 @@
 import React from "react";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 import DarkModeSwitcher from "./components/DarkModeSwitcher";
-import { Badge } from "ui";
+import { Badge } from "@thanosui/react";
 
 const config: DocsThemeConfig = {
     darkMode: true,
