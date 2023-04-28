@@ -1,8 +1,7 @@
-import { FC, ReactNode, useState, MouseEvent, } from "react";
+import { FC, MouseEvent, ReactNode } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
-import Ripple from "../Ripple";
-import { useDrip } from "../Drip/useDrip";
 import Drip from "../Drip/Drip";
+import { useDrip } from "../Drip/useDrip";
 
 const card = tv({
     slots: {

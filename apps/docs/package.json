@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "commonjs",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^13.3.0",
+    "next": "^13.1.0",
     "nextra": "^2.4.0",
     "nextra-theme-docs": "^2.4.0",
     "react": "18.2.0",
