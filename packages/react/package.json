@@ -2,10 +2,19 @@
   "name": "@thanosui/react",
   "version": "1.0.0",
   "license": "MIT",
+  "homepage": "https://thanosui.dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/thanosui/thanosui"
   },
+  "keywords": [
+    "react",
+    "react ui",
+    "components",
+    "modern components",
+    "react components",
+    "tailwind"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -61,7 +70,6 @@
     "tailwind-variants": "^0.1.2"
   },
   "publishConfig": {
-    "access": "public",
-    "//@thanosui:registry": "https://npm.pkg.github.com/"
+    "access": "public"
   }
 }
