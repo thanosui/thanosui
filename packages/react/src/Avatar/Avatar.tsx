@@ -1,7 +1,6 @@
 import { type VariantProps, tv } from 'tailwind-variants';
 import { colorVariants } from '../utils/variants';
 import cx from '../utils/cx';
-import { ReactNode } from 'react';
 
 const avatar = tv({
     base: [

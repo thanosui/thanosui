@@ -12,7 +12,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo run clean && rm -rf node_modules",
-    "publish-packages": "turbo run build lint test && changeset version && changeset publish",
+    "publish-packages": "NPM_TOKEN=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 turbo run build lint test && changeset version && changeset publish",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch"
   },
@@ -25,7 +25,7 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "@changesets/cli": "^2.26.0"
+    "@changesets/cli": "^2.26.1"
   },
   "packageManager": "pnpm@7.28.0"
 }
