@@ -141,8 +141,7 @@ export const Avatar = (props: AvatarProps) => {
             {src &&
                 <img
                     src={src}
-                    className=' duration-0 transition hover:scale-150'
-                // className={baseStyles}
+                    className='duration-0 transition hover:scale-150'
                 />
             }
         </span>
