@@ -2,8 +2,6 @@ import { FC, ReactNode } from "react"
 import { VariantProps, tv } from "tailwind-variants"
 import { colorVariants } from "../utils/variants"
 
-
-// inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium 
 const badge = tv({
     base: [
         'inline-flex',
