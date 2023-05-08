@@ -1,6 +1,5 @@
 {
-  "name": "thanos",
-  "version": "0.0.0",
+  "name": "core",
   "private": true,
   "workspaces": [
     "apps/*",
