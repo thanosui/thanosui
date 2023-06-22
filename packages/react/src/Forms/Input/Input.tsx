@@ -24,7 +24,7 @@ const input = tv({
     }
 })
 
-// type InputVariantProps = VariantProps<typeof input>
+type InputVariantProps = VariantProps<typeof input>
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
